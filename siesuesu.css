@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* 横スクロールを無効にする */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    width: 100vw; /* 画面幅に合わせる */
+    height: 100%; /* 高さは必要な分だけ */
+    overflow-y: scroll; /* 縦スクロールを有効に */
+}
+
+.image-container img {
+    width: 100%; /* 横幅に合わせてリサイズ */
+    height: auto; /* 高さは自動調整 */
+    object-fit: contain; /* 縦横比を保ちながら画像が収まるように */
+    max-height: 35vh; /* 現在の50vhの0.7倍に設定 */
+}
